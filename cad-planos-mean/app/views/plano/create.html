@@ -3,6 +3,12 @@
 <hr>
 <form name="planoForm" ng-submit="saveData(plano)" novalidate class="form-horizontal">
     <div class="form-group">
+        <label class="col-md-2">Codigo</label>
+        <div class="col-md-10">
+            <input type="text" readonly ng-model="plano.codigo" name="codigo" ng-required="true" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
         <label class="col-md-2">Descrição</label>
         <div class="col-md-10">
             <input type="text" ng-model="plano.descricao" name="descricao" ng-required="true" class="form-control" />
