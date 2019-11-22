@@ -1,6 +1,6 @@
-<h2>Users Listing</h2>
+<h2>Listagem de Planos</h2>
 
-<table class="table" ng-if="planos.length>0">
+<table class="table" ng-if="planos.length > 0">
     <tr>
         <th>SNo.</th>
         <th>Name</th>
@@ -10,12 +10,12 @@
     </tr>
     <tr ng-repeat="plano in planos">
         <td>1</td>
-        <td></td>
+        <td>{{plano.name}}</td>
         <td></td>
         <td></td>
         <td>
             <a ui-sref="edit({id:plano._id})">Edit</a> |
-            <a href="#" ng-click="deleteUser(plano._id)">Delete</a>
+            <a href="#" ng-click="deletePlano(plano._id)">Delete</a>
         </td>
     </tr>
 </table>

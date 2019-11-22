@@ -11,6 +11,7 @@
         $scope.planos = [];
 
         if ($state.current.name == "planos") {
+            console.log('controller ==')
             $rootScope.Title = "Plano Listing";
             planoService.getPlanos().then(function (res) {
                 $scope.planos = res.data;
@@ -19,7 +20,7 @@
             });
 
             $scope.deletePlano = function (id) {
-                if (confirm('Are you sure to delete?')) {
+                if (confirm('Tem certeza que quer excluir?')) {
                     planoService.deletePlano(id).then(function (res) {
                         if (res.data == "deleted") {
                             $state.go("planos", {}, { reload: true });
