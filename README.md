@@ -1,3 +1,12 @@
+# Obs do desenvolvedor: 
+A lógica de controle da numeração do código não foi implementada devido ao curto prazo, posso fazer em alguns minutos porém estou focando esses últimos momentos na documentação
+
+A hospedagem do sistema no Heroku está em andamento no momento desse commit
+
+A configuração da persistência de dados na nuvem (MLab/MongoDB Atlas) exigiu o IP da máquina que faz o acesso, caso queira alterar para um outro cluster para testar a aplicação, mude no arquivo "server > config > db.js" ou me informe o IP que realizará o teste para que eu possa incluí-lo 
+
+
+
 # Desafio
 Desafio de Desenvolvedor Fullstack Ecossistema Virtus
 
