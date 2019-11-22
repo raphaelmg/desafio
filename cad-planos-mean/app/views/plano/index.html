@@ -1,0 +1,24 @@
+<h2>Users Listing</h2>
+
+<table class="table" ng-if="planos.length>0">
+    <tr>
+        <th>SNo.</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact No.</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="plano in planos">
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <a ui-sref="edit({id:plano._id})">Edit</a> |
+            <a href="#" ng-click="deleteUser(plano._id)">Delete</a>
+        </td>
+    </tr>
+</table>
+<div ng-if="planos.length == 0">
+    No record found !!
+</div>

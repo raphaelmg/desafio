@@ -1,0 +1,36 @@
+<h2 ng-show="plano._id!=null">Edit</h2>
+<h2 ng-hide="plano._id!=null">Create</h2>
+<hr>
+<form name="planoForm" ng-submit="saveData(plano)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Name</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="plano.name" name="name" ng-required="true" class="form-control" />
+            <p ng-show="planoForm.name.$error.required && (planoForm.$submitted || planoForm.name.$dirty)"
+                class="text-danger">Please Enter Name</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Address</label>
+        <div class="col-md-10">
+            <textarea name="address" ng-model="plano.address" ng-required="true" class="form-control"></textarea>
+            <p ng-show="planoForm.address.$error.required && (planoForm.$submitted || planoForm.address.$dirty)"
+                class="text-danger">Please Enter Address</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Contact No.</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="plano.contactNo" name="contactNo" ng-required="true" class="form-control" />
+            <p ng-show="planoForm.contactNo.$error.required && (planoForm.$submitted || planoForm.contactNo.$dirty)"
+                class="text-danger">Please Enter Contact No.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary" ng-show="plano._id!=null" />
+            <input type="submit" value="Save" class="btn btn-primary" ng-hide="plano._id!=null" />
+            <a ui-sref="planos" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>
