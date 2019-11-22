@@ -2,23 +2,27 @@
 
 <table class="table" ng-if="planos.length > 0">
     <tr>
-        <th>SNo.</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Contact No.</th>
-        <th>Actions</th>
+        <th>Código.</th>
+        <th>Descrição</th>
+        <th>Vigência Inicial</th>
+        <th>Vigência Final</th>
+        <th>Valor Parcela</th>
+        <th>Desconto</th>
+        <th>Ações</th>
     </tr>
     <tr ng-repeat="plano in planos">
-        <td>1</td>
-        <td>{{plano.name}}</td>
-        <td></td>
-        <td></td>
+        <td>{{plano.id}}</td>
+        <td>{{plano.descricao}}</td>
+        <td>{{plano.vigenciaInicial}}</td>
+        <td>{{plano.vigenciaFinal}}</td>
+        <td>{{plano.valorParcela}}</td>
+        <td>{{plano.desconto}}</td>
         <td>
-            <a ui-sref="edit({id:plano._id})">Edit</a> |
-            <a href="#" ng-click="deletePlano(plano._id)">Delete</a>
+            <a ui-sref="edit({id:plano._id})">Editar</a> |
+            <a href="#" ng-click="deletePlano(plano._id)">Deletar</a>
         </td>
     </tr>
 </table>
 <div ng-if="planos.length == 0">
-    No record found !!
+    Nenhum registro encontrado!!
 </div>

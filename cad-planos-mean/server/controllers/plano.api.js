@@ -3,7 +3,6 @@ var express = require("express"),
     plano = require("../models/plano.js");
 
 router.get("/", function (req, res) {
-    console.log('exucutando... find')
     plano.find({}, function (err, data) {
         if (err) {
             res.send("error");
@@ -21,7 +20,6 @@ router.get("/", function (req, res) {
         res.send(data[0]);
     });
 }).post("/", function (req, res) {
-    console.log('exucutando...')
     var obj = req.body;
     var model = new plano(obj);
     model.save(function (err) {
@@ -35,7 +33,12 @@ router.get("/", function (req, res) {
     var id = req.params.id;
     var obj = req.body;
 
-    plano.findByIdAndUpdate(id, { name: obj.name, contactNo: obj.contactNo, address: obj.address },
+    plano.findByIdAndUpdate(id, 
+        {   descricao: obj.descricao, 
+            vigenciaInicial: obj.vigenciaInicial, 
+            vigenciaFinal: obj.vigenciaFinal,
+            valorParcela: obj.valorParcela,
+            desconto: obj.desconto},
         function (err) {
             if (err) {
                 res.send("error");

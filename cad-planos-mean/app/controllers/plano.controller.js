@@ -11,7 +11,6 @@
         $scope.planos = [];
 
         if ($state.current.name == "planos") {
-            console.log('controller ==')
             $rootScope.Title = "Plano Listing";
             planoService.getPlanos().then(function (res) {
                 $scope.planos = res.data;
