@@ -13,7 +13,7 @@
     <div class="form-group">
         <label class="col-md-2">Vigência Inicial</label>
         <div class="col-md-10">
-            <textarea name="vigenciaInicial" ng-model="plano.vigenciaInicial" ng-required="true" class="form-control"></textarea>
+            <input type="text" name="vigenciaInicial" ng-model="plano.vigenciaInicial" ng-required="true" class="form-control"></input>
             <p ng-show="planoForm.vigenciaInicial.$error.required && (planoForm.$submitted || planoForm.vigenciaInicial.$dirty)"
                 class="text-danger">Informe a vigência inicial</p>
         </div>
