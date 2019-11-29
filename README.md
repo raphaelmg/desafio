@@ -1,3 +1,10 @@
+# Iniciar o projeto:
+Na pasta do projeto
+
+npm start
+
+node
+
 # Obs do desenvolvedor: 
 A lógica de controle da numeração do código não foi implementada devido ao curto prazo, posso fazer em alguns minutos porém estou focando esses últimos momentos na documentação
 
