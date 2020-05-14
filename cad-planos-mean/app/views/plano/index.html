@@ -1,0 +1,28 @@
+<h2>Listagem de Planos</h2>
+
+<table class="table" ng-if="planos.length > 0">
+    <tr>
+        <th>Código.</th>
+        <th>Descrição</th>
+        <th>Vigência Inicial</th>
+        <th>Vigência Final</th>
+        <th>Valor Parcela</th>
+        <th>Desconto</th>
+        <th>Ações</th>
+    </tr>
+    <tr ng-repeat="plano in planos">
+        <td>{{plano._id}}</td>
+        <td>{{plano.descricao}}</td>
+        <td>{{plano.vigenciaInicial}}</td>
+        <td>{{plano.vigenciaFinal}}</td>
+        <td>{{plano.valorParcela}}</td>
+        <td>{{plano.desconto}}</td>
+        <td>
+            <a ui-sref="edit({id:plano._id})">Editar</a> |
+            <a href="#" ng-click="deletePlano(plano._id)">Deletar</a>
+        </td>
+    </tr>
+</table>
+<div ng-if="planos.length == 0">
+    Nenhum registro encontrado!!
+</div>
